@@ -5,10 +5,9 @@
 
 ---
 
-[![License: MIT](https://shields.io)](https://opensource.org)
-[![Stars](https://shields.io)](https://github.com)
-[![Forks](https://shields.io)](https://github.com)
-[![Support](https://shields.io)](#-financial-support)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/shd-git/fast-asdlc?style=social)](https://github.com/shd-git/fast-asdlc/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/shd-git/fast-asdlc?style=social)](https://github.com/shd-git/fast-asdlc/network/members)
 
 ## 🚀 The Vision
 **Fast-ASDLC** is not just a collection of prompts; it is a complete engineering methodology designed for the AI era. It automates **80-90% of routine SDLC tasks**—from requirements gathering to DevOps manifests—while maintaining 100% architectural integrity through strict adherence to DDD, Hexagonal Architecture, and SOLID principles.
