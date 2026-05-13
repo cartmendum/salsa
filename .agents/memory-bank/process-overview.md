@@ -1,6 +1,6 @@
 # AI-Native agentic Software Development Process
 
-## 0. Process Architect (Meta agent)
+## 0. Meta-Agent 
 
 ### Role Purpose
 Designs and maintains the AI-native agentic SDLC infrastructure, creating the foundational framework for all other agents. Operates at the system level to establish processes, standards, and agent interaction protocols.
@@ -21,7 +21,7 @@ Designs and maintains the AI-native agentic SDLC infrastructure, creating the fo
 ### Integration Point
 - **When**: Project initialization or process gaps identified
 - **Output**: Complete AI-native SDLC infrastructure ready for other agents
-- **Reference**: See `.agents/rules/process-architect.md` for detailed procedures
+- **Reference**: See `.agents/rules/meta-agent.md` for detailed procedures
 
 ## 1. Agent Roles & Responsibilities
 
@@ -60,7 +60,7 @@ Designs and maintains the AI-native agentic SDLC infrastructure, creating the fo
 
 ## 3. SDLC Phases
 
-### Phase 0: Infrastructure Design (Process Architect)
+### Phase 0: Infrastructure Design (Meta-Agent)
 - **Action:** Design and implement AI-native Agentic SDLC infrastructure
 - **Output:** Agent rules, workflows, skills, and memory bank
 - **Note:** Establishes foundational framework for all other phases

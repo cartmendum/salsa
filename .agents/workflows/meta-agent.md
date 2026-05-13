@@ -1,4 +1,4 @@
-# Workflow: Process-Architect (Meta agent)
+# Workflow: Meta-Agent 
 
 ## Phase 1: Context & Alignment
 1. **Initialize:** Read `/.agents/memory-bank/process-overview.md` to align with the specific AI-native Agentic SDLC requirements.
@@ -18,7 +18,7 @@
 
 ## Phase 3: Integration & Quality Gate
 1. **Cross-Reference:** Ensure the **Architect** knows how to trigger the **Programmer**, and the **Programmer** knows which **Skills** to invoke.
-2. **Review:** Verify that all new files comply with the `Language & Token Policy` (Instructions in EN, Docs in EN).
+2. **Review:** Verify that all new files comply with the `Language & Token Policy` (Instructions in EN, Docs according description in `/.agents/memory-bank/project-brief.md`).
 3. **Dependency Check:** If a new Workflow is created, ensure the corresponding Role's `/.agents/rules/` points to it.
 
 ## Phase 4: Finalization & Handover

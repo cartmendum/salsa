@@ -6,7 +6,7 @@ First of all, thank you for considering contributing to Fast-ASDLC! Our goal is 
 Fast-ASDLC follows the **BDFL (Benevolent Dictator For Life)** model. The author maintains final approval over all changes to ensure the framework remains architecturally consistent and optimized for AI agents.
 
 ### The Gold Standards
-Every contribution must strictly adhere to core Fast-ASDLC principles:
+Every contribution must strictly adhere to [Fast-ASDLC methodology](/.agents/fast-asdlc/METHODOLOGY.md) and core Fast-ASDLC principles:
 1.  **Everything-as-Code:** Documentation, diagrams, code, and infrastructure are code.
 2.  **Hexagonal Architecture:** Strict isolation of the Domain layer.
 3.  **SOLID Principles:** Especially the Single Responsibility and Open/Closed principles.

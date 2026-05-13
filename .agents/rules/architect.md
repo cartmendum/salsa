@@ -83,7 +83,7 @@ The Architect produces:
 ## Integration with Other Agents
 - **Input to Programmer**: Provides implementable specifications for the Programmer agent
 - **Feedback Loop**: Reviews implementation results and adjusts architecture as needed
-- **Process Architect Interaction**: May request rule updates if process inefficiencies are identified
+- **Meta-Agent Interaction**: May request rule updates if process inefficiencies are identified
 
 ## C4 Model Consistency Validation
 The Architect must perform cross-level validation of the C4 model to ensure architectural integrity and provide quantitative assessment of consistency:
