@@ -48,12 +48,18 @@
 - **Human-in-the-Loop:** Explicit human validation checkpoints block every inter-agent role transition.
 
 ## 7. SDLC Phase Execution Sequence
-- **Phase 0 (Infrastructure Setup):** Meta-Agent reads `project-brief.md`, `process-overview.md`, and initializes/updates the agent workforce mappings.
-- **Phase 1 (Analysis & Design):** Analyst and Architect agents construct requirements, diagrams, and precise specifications (file/class names).
-- **Phase 2 (Additive Implementation):** Programmer Agent writes code container-by-container (Independent layers first). Adheres strictly to SOLID, Hexagonal isolation, and CQRS.
-- **Phase 3 (Environment Deployment):** Programmer Agent (via DevOps skills) populates `infra/` to allow one-command sandbox environment orchestration.
-- **Phase 4 (Validation & Security Gating):** QA Agent automates integration suites against the deployed SUT. DevSecOps automated pipelines execute security posture scans.
-- **Phase 5 (Delivery):** Final human code audit and code merge to `main`.
+- **Phase 0 (Infrastructure Setup):** Meta-Agent reads `project-brief.md` and `process-overview.md`, then initializes/updates the agent workforce manifests and tool configurations.
+- **Phase 1 (Analysis & Design):** 
+  - Analyst Agent builds requirements and Use Cases with formal Acceptance Criteria inside `/docs/domain/usecases/` and updates `/docs/domain/glossary.md`. [HITL Gate]
+  - Architect Agent inputs these use cases to construct C4 models (Mermaid.js), Threat Models, and low-level specifications (file/class/method names) inside `/docs/specs/`.
+  - QA Agent instantly performs static contract analysis of the generated architecture against the analytical use cases to verify design completeness before any code is written. [HITL Gate]
+- **Phase 2 (Additive Implementation):** Programmer Agent writes code container-by-container (Independent -> Dependent) inside `/src/` and unit tests inside `/tests/`. Adheres strictly Architect`s specs.
+- **Phase 3 (Environment Deployment):** Programmer Agent (via DevOps skills) populates `/infra/` with orchestration manifests to allow one-command sandbox deployment.
+- **Phase 4 (Validation & Quality Gating):** 
+  - QA Agent translates Acceptance Criteria from `/docs/domain/usecases/` into executable automated test suites inside `/tests/`. [HITL Gate]
+  - QA Agent executes deployment scripts from `/infra/` to spin up the System Under Test (SUT) and Component Stubs (DOC). 
+  - QA Agent runs functional integration, regressions, performance, and AppSec vulnerability scans. Structured defect reports are logged directly in `.backlog/` if tests fail.
+- **Phase 5 (Delivery):** Final human code audit, confirmation of test logs, and branch merge to `main` via DevSecOps CI/CD pipelines.
 
 ## 8. Universal Standards
 

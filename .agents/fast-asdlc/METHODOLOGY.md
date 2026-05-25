@@ -69,11 +69,12 @@
 ## 4. Operational Workflow (The "Line")
 1. **Intention:** Lead creates a file in `.backlog/` with a task tracker link (e.g., Jira). Feature-branch is created.
 2. **Analysis:** Analyst Agent + Human define Business Logic and UI Mocks in `docs/domain/`. Dictionary is updated in `docs/domain/glossary.md`. Handoff links are added to the backlog file.
-3. **Architecture:** Architect Agent + Human create C4 models, Threat Models, and detailed Specs (class/filenames). Specs include required **Skill Lists** for Dev Agents.
-4. **Implementation:** Programmer Agent generates code/unit tests container-by-container (Independent -> Dependent).
-5. **Infrastructure:** Dev Agent (DevOps skill) creates `infra/` artifacts to deploy the System Under Test (SUT).
-6. **Automation QA:** QA Agent + Human create integration/load tests based on Use Cases and Specs. QA Agent reports bugs back to Dev Agent if tests fail.
-7. **Delivery:** Dev Agent (DevSecOps skill) creates CI/CD pipelines. Final merge to `main` triggers full validation suite.
+3. **Architecture:** Architect Agent + Human create C4 models, Threat Models, and detailed Specs (class/filenames). Specs include required **Skill Lists** for Programmer Agents.
+4. **QA Test Generation (HITL Gate):** QA Agent reads structured Acceptance Criteria from `/docs/domain/usecases/` and Architect's specs to generate automated test suites inside `/tests/`. Execution pauses for Human Review.
+5. **Implementation:** Programmer Agent generates code/unit tests container-by-container (Independent -> Dependent).
+6. **Environment Deployment:** Programmer Agent populates `infra/` for one-command SUT deployment.
+7. **QA Dynamic Execution (HITL Gate):** QA Agent deploys SUT/DOC using `infra/` assets, executes integration, regression, load, and AppSec suites. If tests fail, QA logs structured defects in `.backlog/` for the Programmer. If they pass, results are output for Human Gate 2 review.
+8. **Delivery:** Programmer Agent (DevSecOps skill) creates CI/CD pipelines. Final merge to `main` triggers full validation suite.
 
 ## 5. Quality Gates
 - **Plan/Act Cycle:** Agents discuss plans before acting.
